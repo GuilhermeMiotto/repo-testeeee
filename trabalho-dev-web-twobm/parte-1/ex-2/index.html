@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX-2</title>
+    <style>
+        p {
+            font-size: 20px;
+            color: rgb(10, 247, 22);
+        }
+    </style>
+</head>
+<body>
+    <p id="ss1"></p>
+
+<button onclick="showResult()">Subtrair</button>
+
+    <script>
+        
+        const showResult = () => {
+          let firstNumber = +prompt('Insira o Primeiro Numero')
+          let secondNumber = +prompt('Insira o Segundo Numero')
+        const sum = firstNumber - secondNumber;
+        document.getElementById('ss1').textContent = `O resultado da subtracao é ${sum}`;
+      }
+        
+    </script>
+</body>
+</html>
