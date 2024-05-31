@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-4</title>
+</head>
+
+<body>
+  <button onclick="timeNow()">Mostrar Horário</button>
+  <h3 id="newTime"></h3>
+
+  <script>
+    let = timeNow = () => {
+      let data = new Date();
+      let horas = data.getHours();
+      let minutos = data.getMinutes();
+      let segundos = data.getSeconds();
+
+      horas = horas < 10 ? "0" + horas : horas;
+      minutos = minutos < 10 ? "0" + minutos : minutos;
+      segundos = segundos < 10 ? "0" + segundos : segundos;
+
+      let horarioAtual = horas + ":" + minutos + ":" + segundos;
+
+      document.getElementById('newTime').textContent =
+        `O Horario atual e: ${horarioAtual}`;
+    };
+  </script>
+</body>
+
+</html>

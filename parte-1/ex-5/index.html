@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX-5</title>
+</head>
+
+<body>
+
+    <div id="time-message"></div>
+
+
+    <script>
+        const displayMessage = () => {
+            const messages = [
+                { start: 0, end: 9, message: "hora do café da manhã!" },
+                { start: 9, end: 13, message: "hora do almoço!" },
+                { start: 13, end: 18, message: "hora do café da tarde!" },
+                { start: 18, end: 24, message: "hora da janta!" }
+            ];
+
+            const currentHour = new Date().getHours();
+
+            const timeMessage = messages.find(({ start, end }) => currentHour >= start && currentHour < end).message;
+
+            const messageElement = document.getElementById('time-message');
+            messageElement.innerHTML = timeMessage;
+        };
+
+        displayMessage();
+    </script>
+
+</body>
+
+</html>

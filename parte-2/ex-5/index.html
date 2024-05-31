@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX-5 Parte-2</title>
+</head>
+
+<body>
+
+    <ul id="car-characteristics"></ul>
+
+    <script>
+        class Car {
+            constructor(brand, model, year, color, horsepower) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+                this.color = color;
+                this.horsepower = horsepower;
+            }
+
+            getCharacteristics() {
+                return {
+                    Marca: this.brand,
+                    Modelo: this.model,
+                    Ano: this.year,
+                    Cor: this.color,
+                    'Cavalos de Potência': this.horsepower
+                };
+            }
+        }
+
+        const displayCarCharacteristics = () => {
+            const myCar = new Car('McLaren', '720S', 2023, 'Laranja', 710);
+
+            const carCharacteristics = myCar.getCharacteristics();
+            const characteristicsListElement = document.getElementById('car-characteristics');
+
+            for (const key in carCharacteristics) {
+                if (carCharacteristics.hasOwnProperty(key)) {
+                    const characteristicItem = document.createElement('li');
+                    characteristicItem.textContent = `${key}: ${carCharacteristics[key]}`;
+                    characteristicsListElement.appendChild(characteristicItem);
+                }
+            }
+        };
+
+        displayCarCharacteristics();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX-1 Parte-2</title>
+</head>
+
+<body>
+    <div id="welcome-message"></div>
+
+    <script>
+        const displayWelcomeMessage = () => {
+            const genderInput = prompt("Digite 'M' se for do sexo masculino ou 'F' se for do sexo feminino:").toUpperCase();
+
+            const message = (() => {
+                switch (genderInput) {
+                    case 'M':
+                        return "Seja bem vindo!";
+                    case 'F':
+                        return "Seja bem vinda!";
+                    default:
+                        return "Entrada inválida!";
+                }
+            })();
+
+            const messageElement = document.getElementById('welcome-message');
+            messageElement.innerHTML = message;
+        };
+
+        displayWelcomeMessage();
+    </script>
+</body>
+
+</html>

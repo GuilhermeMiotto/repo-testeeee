@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX-2 Parte-2</title>
+</head>
+
+<body>
+
+    <ul id="courses-list"></ul>
+
+    <script>
+        const displayCourses = () => {
+            const courses = [
+                "Direito Digital",
+                "Desenvolvimento WEB",
+                "Ambientação Tech",
+                "Cybersegurança",
+                "Extensão 1",
+                "Pensamento Computacional",
+                "Linguagem e Interação"
+            ];
+
+            const coursesListElement = document.getElementById('courses-list');
+
+            for (let i = 0; i < courses.length; i++) {
+                const courseItem = document.createElement('li');
+                courseItem.textContent = courses[i];
+                coursesListElement.appendChild(courseItem);
+            }
+        };
+
+        displayCourses();
+    </script>
+</body>
+
+</html>
